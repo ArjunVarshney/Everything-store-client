@@ -11,10 +11,11 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
         className="rounded-xl relative aspect-square md:aspect-[2.4/1] overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url(${data?.imageUrl})` }}
       >
-        <div className="h-full w-full flex flex-col justify-center items-center text-center gap-y-8">
-          <div className="font-bold text-5xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
+        <div className="relative h-full w-full flex flex-col justify-center items-center text-center gap-y-8">
+          <div className="font-bold text-5xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs z-10">
             {data?.label}
           </div>
+          <div className="absolute w-full h-full bg-white blur-3xl opacity-30" />
         </div>
       </div>
     </div>
